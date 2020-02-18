@@ -1,12 +1,12 @@
 
-function F (n:number) : number {
+function fibNumber (n:number) : number {
     if(n===0 || n ===1 ) return n;
-    return F(n-1) + F(n-2);
+    return fibNumber(n-1) + fibNumber(n-2);
 }
 function fibSeq(n:number): number[]{
     let fibArr: number[] = [];
     for(let i = 0; i<=n; i++){
-        fibArr.push(F(i));
+        fibArr.push(fibNumber(i));
     }
     return fibArr;
 }

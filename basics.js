@@ -1,12 +1,12 @@
-function F(n) {
+function fibNumber(n) {
     if (n === 0 || n === 1)
         return n;
-    return F(n - 1) + F(n - 2);
+    return fibNumber(n - 1) + fibNumber(n - 2);
 }
 function fibSeq(n) {
     var fibArr = [];
     for (var i = 0; i <= n; i++) {
-        fibArr.push(F(i));
+        fibArr.push(fibNumber(i));
     }
     return fibArr;
 }
